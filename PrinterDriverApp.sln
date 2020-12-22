@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrinterDriverApp", "PrinterDriverApp\PrinterDriverApp.csproj", "{989511C4-D87A-4AE3-8EBE-9F1FA1693179}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{989511C4-D87A-4AE3-8EBE-9F1FA1693179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{989511C4-D87A-4AE3-8EBE-9F1FA1693179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{989511C4-D87A-4AE3-8EBE-9F1FA1693179}.Debug|x64.ActiveCfg = Debug|x64
+		{989511C4-D87A-4AE3-8EBE-9F1FA1693179}.Debug|x64.Build.0 = Debug|x64
+		{989511C4-D87A-4AE3-8EBE-9F1FA1693179}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{989511C4-D87A-4AE3-8EBE-9F1FA1693179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{989511C4-D87A-4AE3-8EBE-9F1FA1693179}.Release|x64.ActiveCfg = Release|x64
+		{989511C4-D87A-4AE3-8EBE-9F1FA1693179}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99B75C3F-8501-4246-9F86-4044C476DBD9}
+	EndGlobalSection
+EndGlobal
