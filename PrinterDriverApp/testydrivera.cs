@@ -11,6 +11,7 @@ using System.Text;
 
 namespace PrinterDriverApp
 {
+#warning użyc zamiast tej biblioteki (claw pdf, lepiej jezeli uzyje mfilemon, wydaje sie to byc bezpieczniejsza opcja, niz grzebanie w tym samemu)
     public class testydrivera
     {
         #region Printer Driver Win32 API Constants
