@@ -11,7 +11,6 @@ using System.Text;
 
 namespace PrinterDriverApp
 {
-#warning użyc zamiast tej biblioteki (claw pdf, lepiej jezeli uzyje mfilemon, wydaje sie to byc bezpieczniejsza opcja, niz grzebanie w tym samemu)
     public class testydrivera
     {
         #region Printer Driver Win32 API Constants
@@ -33,17 +32,34 @@ namespace PrinterDriverApp
 
         #endregion Printer Driver Win32 API Constants
 
+        //private const string ENVIRONMENT = null;
+        //private const string PRINTERNAME = "clawPDF";
+        //private const string DRIVERNAME = "clawPDF Virtual Printer";
+        //private const string HARDWAREID = "clawPDF_Driver";
+        //private const string PORTMONITOR = "CLAWMON";
+        //private const string MONITORDLL = "clawmon.dll";
+        //private const string MONITORUIDLL = "clawmonui.dll";
+        //private const string PORTNAME = "CLAWMON:";
+        //private const string PRINTPROCESOR = "winprint";
+
+        //private const string DRIVERMANUFACTURER = "Andrew Hess // clawSoft";
+
+        //private const string DRIVERFILE = "PSCRIPT5.DLL";
+        //private const string DRIVERUIFILE = "PS5UI.DLL";
+        //private const string DRIVERHELPFILE = "PSCRIPT.HLP";
+        //private const string DRIVERDATAFILE = "SCPDFPRN.PPD";
+
         private const string ENVIRONMENT = null;
         private const string PRINTERNAME = "IcPenPDFPrinter";
-        private const string DRIVERNAME = "clawPDF Virtual Printer";
-        private const string HARDWAREID = "clawPDF_Driver";
-        private const string PORTMONITOR = "ICPENDRIVER";
+        private const string DRIVERNAME = "ICPEN Virtual Printer";
+        private const string HARDWAREID = "ICPEN_Driver";
+        private const string PORTMONITOR = "ICPEN";
         private const string MONITORDLL = "clawmon.dll";
         private const string MONITORUIDLL = "clawmonui.dll";
         private const string PORTNAME = "ICPENDRIVER:";
         private const string PRINTPROCESOR = "winprint";
 
-        private const string DRIVERMANUFACTURER = "Andrew Hess // clawSoft";
+        private const string DRIVERMANUFACTURER = "IC Solutions";
 
         private const string DRIVERFILE = "PSCRIPT5.DLL";
         private const string DRIVERUIFILE = "PS5UI.DLL";
@@ -94,22 +110,16 @@ namespace PrinterDriverApp
 
         public testydrivera()
         {
-            //if (UninstallclawPDFPrinter())
-            //{
-                var asd = InstallclawPDFPrinter(@"C:\Users\Pawel2\source\repos\PrinterDriverApp\PrinterDriverApp\bin\x64\Debug", @"C:\Users\Pawel2\Desktop\ProjektNaSzybko.exe");
-                if (asd)
-                {
-                    Console.WriteLine("Zesrałem sie");
-                }
-                else
-                {
-                    Console.WriteLine("nope 2");
-                }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Nope");
-            //}
+            var result = UninstallclawPDFPrinter();
+            var installResult = InstallclawPDFPrinter(Directory.GetCurrentDirectory(), Directory.GetCurrentDirectory() + @"\ProjektNaSzybko.exe");
+            if (installResult)
+            {
+                Console.WriteLine("Zesrałem sie");
+            }
+            else
+            {
+                Console.WriteLine("nope 2");
+            }
         }
         public bool UninstallclawPDFPrinter()
         {
@@ -205,27 +215,6 @@ namespace PrinterDriverApp
                 //Failed to add port monitor
                 Console.WriteLine(INFO_INSTALLPORTMONITOR_FAILED);
 
-            //if (printerInstalled == false)
-            //{
-            //    // Printer installation failed -
-            //    // undo all the install steps
-            //    while (undoInstallActions.Count > 0)
-            //    {
-            //        undoInstall undoAction = undoInstallActions.Pop();
-            //        try
-            //        {
-            //            if (!undoAction())
-            //            {
-            //                Console.WriteLine(String.Format(INSTALL_ROLLBACK_FAILURE_AT_FUNCTION, undoAction.Method.Name));
-            //            }
-            //        }
-            //        catch (Win32Exception win32Ex)
-            //        {
-            //            Console.WriteLine(String.Format(INSTALL_ROLLBACK_FAILURE_AT_FUNCTION, undoAction.Method.Name) +
-            //                                            String.Format(WIN32ERROR, win32Ex.ErrorCode.ToString()));
-            //        }
-            //    }
-            //}
             return printerInstalled;
         }
 

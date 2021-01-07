@@ -87,7 +87,9 @@
     <Content Include="clawmonui.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ProjektNaSzybko.exe" />
+    <Content Include="ProjektNaSzybko.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ps5ui.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
