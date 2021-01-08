@@ -1,0 +1,2 @@
+cd /d "C:\Users\Pawel2\source\repos\PrinterDriverApp\PrinterDriverApp" &msbuild "PrinterDriverApp.csproj" /t:sdvViewer /p:configuration="Release" /p:platform="x64" /p:SolutionDir="C:\Users\Pawel2\source\repos\PrinterDriverApp" 
+exit %errorlevel% 

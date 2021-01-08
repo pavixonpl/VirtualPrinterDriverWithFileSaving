@@ -10,7 +10,7 @@ namespace PrinterDriverApp
     {
         static void Main(string[] args)
         {
-            testydrivera testydrivera = new testydrivera();
+            noweTestyDrivera testydrivera = new noweTestyDrivera();
             Console.WriteLine("The end");
             Console.ReadKey();
 
